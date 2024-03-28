@@ -1,0 +1,142 @@
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grey);
+}
+
+.thank-you-wrapper,
+.rating-wrapper {
+  display: flex;
+  height: 100vh;
+  padding: 1.5rem;
+}
+
+/* .rating-wrapper {
+  display: none;
+} */
+
+.thank-you,
+.rating {
+  display: grid;
+  align-items: center;
+  gap: 1.6rem;
+  max-width: 24rem;
+  width: 100%;
+  margin: auto;
+  background-color: var(--Dark-Blue);
+  padding: 2rem;
+  border-radius: 1.4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you-text-wrapper,
+.rating-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.thank-you-header,
+.rating-text-title {
+  color: var(--White);
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.thank-you-text,
+.rating-text {
+  line-height: 1.5;
+}
+
+.rating-numbers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.rating-star,
+.rating-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: hsla(216, 12%, 54%, 0.103);
+  color: var(--Light-Grey);
+}
+
+.selected {
+  background-color: var(--Medium-Grey);
+  color: var(--White);
+}
+
+.rating-number:active,
+.rating-number:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+  cursor: url("./images/pointer.svg"), pointer;
+}
+
+.rating-submit {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: var(--Orange);
+  color: var(--White);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.rating-submit:active,
+.rating-submit:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+  cursor: url("./images/pointer.svg"), pointer;
+}
+
+/* .thank-you {
+  display: none;
+} */
+
+.thank-you-wrapper {
+  justify-items: center;
+}
+
+.thank-you {
+  padding: 2.9rem 1.6rem;
+}
+
+.thank-you-illustration {
+  justify-self: center;
+}
+
+.thank-you-subheader {
+  color: var(--Orange);
+  padding: 0.4rem 1.2rem;
+  background-color: hsla(216, 12%, 54%, 0.103);
+  justify-self: center;
+  border-radius: 1rem;
+}
+
+.thank-you-text-wrapper {
+  text-align: center;
+}
